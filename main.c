@@ -9,8 +9,6 @@
 
 */
 
-// test commit
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
