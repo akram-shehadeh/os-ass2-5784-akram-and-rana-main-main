@@ -1,0 +1,394 @@
+{
+  "tests": [
+    {
+      "name": "make all",
+      "setup": "",
+      "run": "make all",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 2,
+      "points": 3
+    },
+    {
+      "name": "make uniform-length",
+      "setup": "",
+      "run": "make uniform-length",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 2,
+      "points": 3
+    },
+    {
+      "name": "make debug",
+      "setup": "",
+      "run": "make debug",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "make clean",
+      "setup": "",
+      "run": "make clean",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 2,
+      "points": 3
+    },
+    {
+      "name": "STDIN one one one",
+      "setup": "make",
+      "run": "echo one one one | ./uniform-length",
+      "input": "",
+      "output": "STDIN:\\s+1:\\s+length\\s+3:\\s+one one one\\s+1 children finished.\\s+Total\\s+1\\s+lines found",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 5
+    },
+    {
+      "name": "STDIN hello there one one one one two one three",
+      "setup": "",
+      "run": "./uniform-length < ./tests/stdin-hello-there-one-one-one-one-two-one-three",
+      "input": "",
+      "output": "STDIN:\\s+1:\\s+length\\s+5:\\s+hello there\\s+STDIN:\\s+2:\\s+length\\s+3:\\s+one one one one\\s+1\\s+children finished.\\s+Total\\s+2\\s+lines found",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 5
+    },
+    {
+      "name": "STDIN Hello there world Another123 several: :: \"659jumping Jury Kylls Losing money bonkers",
+      "setup": "",
+      "run": "./uniform-length < ./tests/hello-there-world-another123-several-jumping-jury-kylls-losing-money-bonkers",
+      "input": "",
+      "output": "STDIN:\\s+1:\\s+length\\s+5:\\s+Hello there world\\s+STDIN:\\s+2:\\s+length\\s+7:\\s+Another123 several: :: \"659jumping\\s+1\\s+children finished.\\s+Total\\s+2 lines found",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 5
+    },
+    {
+      "name": "One Input File: one-line-test.txt",
+      "setup": "",
+      "run": "./uniform-length ./tests/one-line-test.txt",
+      "input": "",
+      "output": "1\\s+children finished.\\s+Total\\s+0\\s+lines found",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 5
+    },
+    {
+      "name": "One Input File: two-line-tests.txt",
+      "setup": "",
+      "run": "./uniform-length ./tests/two-line-tests.txt",
+      "input": "",
+      "output": "two-line-tests.txt:\\s+1:\\s+length\\s+3:\\s+one one one\\s+1 children finished.\\s+Total\\s+1\\s+lines found",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 5
+    },
+    {
+      "name": "One Input File: simple-tests.txt",
+      "setup": "",
+      "run": "./uniform-length ./tests/simple-tests.txt",
+      "input": "",
+      "output": ".\\/tests\\/simple-tests.txt:\\s+3:\\s+length\\s+5:\\s+third lines\\s+.\\/tests\\/simple-tests.txt:\\s+4:\\s+length\\s+6:\\s+\"fourth horses\\s+.\\/tests\\/simple-tests.txt:\\s+5:\\s+length\\s+5:\\s+12345fifth hors678e\\s+.\\/tests\\/simple-tests.txt:\\s+6:\\s+length\\s+5:\\s+sixth! \"thing\"\\s+.\\/tests\\/simple-tests.txt:\\s+7:\\s+length\\s+5:\\s+seven: fives\\s+.\\/tests\\/simple-tests.txt:\\s+8:\\s+length\\s+5:\\s+eight sixes: eight eight\\s+.\\/tests\\/simple-tests.txt:\\s+9:\\s+length\\s+7:\\s+Serious beetles invited cricket thither dinners\\s+.\\/tests\\/simple-tests.txt:\\s+10:\\s+length\\s+5:\\s+\\s+Grace found happy music under dusty, brown stair.\\s+.\\/tests\\/simple-tests.txt:\\s+11:\\s+length\\s+5:\\s+Amber Bliss Chime Drake Ember Flute Grasp Haste Inlet Joust Knife Latch Mirth Nudge Olive Prism Quota Ruler Shade Tramp Utter Vowel Whale Xerox Yacht Zebra Crisp Diver Evoke Fable Glide Horde Inlay Jumbo Knack Ledge Magma Nifty Ozone Pixel Quiet Rival Swift Twist Unzip Vixen Woven Xylon Yodel Zesty Ample Bliss Crave Drown Eject Flair Grind Haunt Inset Jolly Karma Latch Mango Nylon Orbit Pique Quirk Rouse Savor Tulip Unify Velum Wrist Xanax Yacht Zippy Crisp Douse Ember Fable Greet Happy Input Joust Knoll Livid Mirth Niche Ozone Prawn Quest Rides Snack Twine Unbox Veiny Waxed Yodel Zebra Cruxs\\s+.\\/tests\\/simple-tests.txt:\\s+14:\\s+length\\s+8:\\s+fourteen 14 fifteens\\s+1 children finished.\\s+Total\\s+10\\s+lines found",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 5
+    },
+    {
+      "name": "One Input File: pride-sentences.txt",
+      "setup": "",
+      "run": "./uniform-length ./tests/pride-sentences.txt",
+      "input": "",
+      "output": ".\\/tests\\/pride-sentences.txt:\\s+206:\\s+length\\s+3:\\s+\"Did not you\\?\\s+.\\/tests\\/pride-sentences.txt:\\s+458:\\s+length\\s+5:\\s+cried Lydia.\\s+.\\/tests\\/pride-sentences.txt:\\s+462:\\s+length\\s+4:\\s+said Jane.\\s+.\\/tests\\/pride-sentences.txt:\\s+1013:\\s+length\\s+7:\\s+\"WILLIAM COLLINS\"\\s+.\\/tests\\/pride-sentences.txt:\\s+1369:\\s+length\\s+6:\\s+\"Heaven forbid!\\s+.\\/tests\\/pride-sentences.txt:\\s+1380:\\s+length\\s+4:\\s+\"Very well.\\s+.\\/tests\\/pride-sentences.txt:\\s+1669:\\s+length\\s+4:\\s+\"Very well.\\s+.\\/tests\\/pride-sentences.txt:\\s+1876:\\s+length\\s+4:\\s+\"Good Lord!\\s+.\\/tests\\/pride-sentences.txt:\\s+2081:\\s+length\\s+4:\\s+Poor Jane!\\s+.\\/tests\\/pride-sentences.txt:\\s+2430:\\s+length\\s+3:\\s+\"Not one.\"\\s+.\\/tests\\/pride-sentences.txt:\\s+3267:\\s+length\\s+2:\\s+Oh, no.\"\\s+.\\/tests\\/pride-sentences.txt:\\s+3358:\\s+length\\s+3:\\s+Yes, yes.\\s+.\\/tests\\/pride-sentences.txt:\\s+4128:\\s+length\\s+3:\\s+How are you all\\?\"\\s+.\\/tests\\/pride-sentences.txt:\\s+4430:\\s+length\\s+6:\\s+Heaven forbid!\\s+.\\/tests\\/pride-sentences.txt:\\s+4603:\\s+length\\s+4:\\s+They came.\\s+.\\/tests\\/pride-sentences.txt:\\s+4820:\\s+length\\s+3:\\s+\"Yes, she did.\"\\s+.\\/tests\\/pride-sentences.txt:\\s+4836:\\s+length\\s+4:\\s+\"Very much.\"\\s+.\\/tests\\/pride-sentences.txt:\\s+4859:\\s+length\\s+3:\\s+\"You did!\\s+.\\/tests\\/pride-sentences.txt:\\s+4921:\\s+length\\s+2:\\s+\"No, no.\\s+.\\/tests\\/pride-sentences.txt:\\s+5018:\\s+length\\s+4:\\s+They then went away.\\s+.\\/tests\\/pride-sentences.txt:\\s+5225:\\s+length\\s+4:\\s+Good girl!\\s+.\\/tests\\/pride-sentences.txt:\\s+5421:\\s+length\\s+4:\\s+Very well.\\s+.\\/tests\\/pride-sentences.txt:\\s+5695:\\s+length\\s+4:\\s+\"Very, very much.\\s+1\\s+children finished.\\s+Total\\s+23\\s+lines found",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 5
+    },
+    {
+      "name": "Two Input Files: pride-sentences.txt paradise-lost.txt 206",
+      "setup": "",
+      "run": "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt",
+      "input": "",
+      "output": ".\\/tests\\/pride-sentences.txt:\\s+206:\\s+length\\s+3:\\s+\"Did not you?",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Two Input Files: pride-sentences.txt paradise-lost.txt 5695",
+      "setup": "",
+      "run": "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt",
+      "input": "",
+      "output": ".\\/tests\\/pride-sentences.txt:\\s+5695:\\s+length\\s+4:\\s+\"Very, very much.",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Two Input Files: pride-sentences.txt paradise-lost.txt 58",
+      "setup": "",
+      "run": "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt",
+      "input": "",
+      "output": ".\\/tests\\/paradise-lost.txt:\\s+58:\\s+length\\s+4:\\s+BOOK VIII",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Two Input Files: pride-sentences.txt paradise-lost.txt 11070",
+      "setup": "",
+      "run": "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt",
+      "input": "",
+      "output": ".\\/tests\\/paradise-lost.txt:\\s+11070:\\s+length\\s+3:\\s+THE END.",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Two Input Files: pride-sentences.txt paradise-lost.txt complete",
+      "setup": "",
+      "run": "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt",
+      "input": "",
+      "output": "2\\s+children finished.\\s+Total\\s+26\\s+lines found",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Two Input Files: two-line-tests.txt simple-tests.txt 1",
+      "setup": "",
+      "run": "./uniform-length ./tests/two-line-tests.txt ./tests/simple-tests.txt",
+      "input": "",
+      "output": ".\\/tests\\/two-line-tests.txt:\\s+1:\\s+length\\s+3:\\s+one one one",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Two Input Files: two-line-tests.txt simple-tests.txt 3",
+      "setup": "",
+      "run": "./uniform-length ./tests/two-line-tests.txt ./tests/simple-tests.txt",
+      "input": "",
+      "output": ".\\/tests\\/simple-tests.txt:\\s+3:\\s+length\\s+5:\\s+third lines",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Two Input Files: two-line-tests.txt simple-tests.txt 4",
+      "setup": "",
+      "run": "./uniform-length ./tests/two-line-tests.txt ./tests/simple-tests.txt",
+      "input": "",
+      "output": ".\\/tests\\/simple-tests.txt:\\s+4:\\s+length\\s+6:\\s+\"fourth horses",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Two Input Files: two-line-tests.txt simple-tests.txt 6",
+      "setup": "",
+      "run": "./uniform-length ./tests/two-line-tests.txt ./tests/simple-tests.txt",
+      "input": "",
+      "output": ".\\/tests\\/simple-tests.txt:\\s+6:\\s+length\\s+5:\\s+sixth! \"thing\"",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Two Input Files: two-line-tests.txt simple-tests.txt complete",
+      "setup": "",
+      "run": "./uniform-length ./tests/two-line-tests.txt ./tests/simple-tests.txt",
+      "input": "",
+      "output": "2\\s+children finished.\\s+Total\\s+11\\s+lines found",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Two Input Files: two-line-tests.txt file-doesnt-exist",
+      "setup": "",
+      "run": "./uniform-length ./tests/two-line-tests.txt file-doesnt-exist",
+      "input": "",
+      "output": ".\\/tests\\/two-line-tests.txt:\\s+1:\\s+length\\s+3:\\s+one one one\\s+1\\s+children finished.\\s+Total\\s+1\\s+lines found",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 5
+    },
+    {
+      "name": "Three Input Files: pride-sentences.txt two-line-tests.txt simple-tests.txt 4128",
+      "setup": "",
+      "run": "./uniform-length ./tests/pride-sentences.txt ./tests/two-line-tests.txt ./tests/simple-tests.txt",
+      "input": "",
+      "output": ".\\/tests\\/pride-sentences.txt:\\s+4128:\\s+length\\s+3:\\s+How are you all\\?\"",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Three Input Files: pride-sentences.txt two-line-tests.txt simple-tests.txt 5695",
+      "setup": "",
+      "run": "./uniform-length ./tests/pride-sentences.txt ./tests/two-line-tests.txt ./tests/simple-tests.txt",
+      "input": "",
+      "output": ".\\/tests\\/pride-sentences.txt:\\s+5695:\\s+length\\s+4:\\s+\"Very, very much.",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Three Input Files: pride-sentences.txt two-line-tests.txt simple-tests.txt 1",
+      "setup": "",
+      "run": "./uniform-length ./tests/pride-sentences.txt ./tests/two-line-tests.txt ./tests/simple-tests.txt",
+      "input": "",
+      "output": ".\\/tests\\/two-line-tests.txt:\\s+\\s+1:\\s+length\\s+3:\\s+one one one",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Three Input Files: pride-sentences.txt two-line-tests.txt simple-tests.txt 14",
+      "setup": "",
+      "run": "./uniform-length ./tests/pride-sentences.txt ./tests/two-line-tests.txt ./tests/simple-tests.txt",
+      "input": "",
+      "output": ".\\/tests\\/simple-tests.txt:\\s+\\s+14:\\s+length\\s+8:\\s+fourteen 14 fifteens",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Three Input Files: pride-sentences.txt two-line-tests.txt simple-tests.txt complete",
+      "setup": "",
+      "run": "./uniform-length ./tests/pride-sentences.txt ./tests/two-line-tests.txt ./tests/simple-tests.txt",
+      "input": "",
+      "output": "3\\s+children finished.\\s+Total\\s+34\\s+lines found",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Four Input Files: pride-sentences.txt paradise-lost.txt leaves-of-grass.txt jekyll-hyde-sentences.txt 4820",
+      "setup": "",
+      "run": "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt ./tests/leaves-of-grass.txt ./tests/jekyll-hyde-sentences.txt",
+      "input": "",
+      "output": ".\\/tests\\/pride-sentences.txt:\\s+4820:\\s+length\\s+3:\\s+\"Yes, she did.\"",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Four Input Files: pride-sentences.txt paradise-lost.txt leaves-of-grass.txt jekyll-hyde-sentences.txt 7063",
+      "setup": "",
+      "run": "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt ./tests/leaves-of-grass.txt ./tests/jekyll-hyde-sentences.txt",
+      "input": "",
+      "output": ".\\/tests\\/paradise-lost.txt:\\s+7063:\\s+length\\s+4:\\s+BOOK VIII.",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Four Input Files: pride-sentences.txt paradise-lost.txt leaves-of-grass.txt jekyll-hyde-sentences.txt 5414",
+      "setup": "",
+      "run": "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt ./tests/leaves-of-grass.txt ./tests/jekyll-hyde-sentences.txt",
+      "input": "",
+      "output": ".\\/tests\\/leaves-of-grass.txt:\\s+5414:\\s+length\\s+9:\\s+mast-hemm’d Manhattan\\?",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Four Input Files: pride-sentences.txt paradise-lost.txt leaves-of-grass.txt jekyll-hyde-sentences.txt 1068",
+      "setup": "",
+      "run": "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt ./tests/leaves-of-grass.txt ./tests/jekyll-hyde-sentences.txt",
+      "input": "",
+      "output": ".\\/tests\\/jekyll-hyde-sentences.txt:\\s+1068:\\s+length\\s+6:\\s+HASTIE LANYON",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Four Input Files: pride-sentences.txt paradise-lost.txt leaves-of-grass.txt jekyll-hyde-sentences.txt completed",
+      "setup": "",
+      "run": "./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt ./tests/leaves-of-grass.txt ./tests/jekyll-hyde-sentences.txt",
+      "input": "",
+      "output": "4\\s+children finished.\\s+Total\\s+130\\s+lines found",
+      "comparison": "regex",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "strace uniform length file exists",
+      "setup": "",
+      "run": "stat strace-uniform-length",
+      "input": "",
+      "output": "File:\\s+strace-uniform-length\\s+Size:\\s+\\d+\\s+Blocks:\\s+\\d+\\s+IO Block:\\s+\\d+\\s+regular file",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "ltrace uniform length summary table file exists",
+      "setup": "",
+      "run": "stat ltrace-uniform-length-summary-table",
+      "input": "",
+      "output": "File:\\s+ltrace-uniform-length-summary-table\\s+Size:\\s+\\d+\\s+Blocks:\\s+\\d+\\s+IO Block:\\s+\\d+\\s+regular file",
+      "comparison": "regex",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "ensure fork is used",
+      "setup": "",
+      "run": "grep fork main.c",
+      "input": "",
+      "output": "fork()",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 0
+    },
+    {
+      "name": "test wait is used",
+      "setup": "",
+      "run": "grep wait main.c",
+      "input": "",
+      "output": "wait(",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "ensure debug has gdb used",
+      "setup": "make debug",
+      "run": "file uniform-length",
+      "input": "",
+      "output": "with debug_info, not stripped",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "install scanelf",
+      "setup": "",
+      "run": "sudo apt install pax-utils -y",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 3,
+      "points": null
+    },
+    {
+      "name": "test debug uses lazy",
+      "setup": "",
+      "run": "scanelf uniform-length -a",
+      "input": "",
+      "output": "LAZY",
+      "comparison": "included",
+      "timeout": 2,
+      "points": null
+    }
+  ]
+}

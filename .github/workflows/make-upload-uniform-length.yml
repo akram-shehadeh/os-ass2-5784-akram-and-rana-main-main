@@ -1,0 +1,59 @@
+name: Compile uniform-length and save multi-file outputs
+
+on: [push]
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository   
+        uses: actions/checkout@v4
+      - name: uniform-length build
+        run: make
+      - name: Archive uniform-length
+        uses: actions/upload-artifact@v3
+        with:
+          name: uniform-length
+          path: uniform-length
+      - name: Two Input Files two-line-tests.txt simple-tests.txt
+        run: ./uniform-length ./tests/two-line-tests.txt ./testssimple-tests.txt > two-input-files-two-line-tests-simple-tests
+      - name: Archive two-input-files-two-line-tests-simple-tests
+        uses: actions/upload-artifact@v3
+        with:
+          name: two-input-files-two-line-tests-simple-tests
+          path: two-input-files-two-line-tests-simple-tests
+      - name: Two Input Files two-line-tests.txt file-doesnt-exist
+        run: ./uniform-length ./tests/two-line-tests.txt ./tests/file-doesnt-exist > two-input-files-two-line-tests-doesnt-exist
+      - name: Archive two-input-files-two-line-tests-doesnt-exist
+        uses: actions/upload-artifact@v3
+        with:
+          name: two-input-files-two-line-tests-doesnt-exist
+          path: two-input-files-two-line-tests-doesnt-exist
+      - name: Three Input Files pride-sentences.txt two-line-tests.txt simple-tests.txt
+        run: ./uniform-length ./tests/pride-sentences.txt ./tests/two-line-tests.txt ./tests/simple-tests.txt > three-input-files-pride-two-line-tests-simple-tests
+      - name: Archive three-input-files-pride-two-line-tests-simple-tests
+        uses: actions/upload-artifact@v3
+        with:
+          name: three-input-files-pride-two-line-tests-simple-tests
+          path: three-input-files-pride-two-line-tests-simple-tests
+      - name: Four Input Files pride-sentences.txt paradise-lost.txt leaves-of-grass.txt jekyll-hyde-sentences.txt
+        run: ./uniform-length ./tests/pride-sentences.txt ./tests/paradise-lost.txt ./tests/leaves-of-grass.txt ./tests/jekyll-hyde-sentences.txt > four-input-files-pride-paradise-lost-leaves-of-grass-jekyll-hyde
+      - name: Archive four-input-files-pride-paradise-lost-leaves-of-grass-jekyll-hyde
+        uses: actions/upload-artifact@v3
+        with:
+          name: four-input-files-pride-paradise-lost-leaves-of-grass-jekyll-hyde
+          path: four-input-files-pride-paradise-lost-leaves-of-grass-jekyll-hyde
+      - name: uniform-length debug build
+        run: make debug
+      - name: rename debug
+        run: mv uniform-length uniform-length-debug
+      - name: Archive uniform-length-debug
+        uses: actions/upload-artifact@v3
+        with:
+          name: unifom-length-debug
+          path: uniform-length-debug

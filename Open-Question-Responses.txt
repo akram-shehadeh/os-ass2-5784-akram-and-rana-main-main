@@ -1,0 +1,40 @@
+Assigment 2 Responses
+Operating Systems
+Semester 1 5784
+
+Student 1:akram shehadeh 211917554
+Student 2:rana shehadeh 315884379
+
+----------------------------------------------------------------
+
+(calls) 1. (2 points)
+
+(calls) 2. (2 points)
+        
+
+(calls) 3. (2 points)
+
+
+(calls) 4. (2 points)
+
+
+(calls) 5. (2 points) 
+
+
+(calls) 6. (2 points)
+
+(calls) 7.:
+
+  (i) execve
+
+ (ii) brk
+
+(iii) openat
+
+ (iv) mmap
+
+  (v) prlimit64
+
+ (vi) clone
+
+(vii) exit_group
