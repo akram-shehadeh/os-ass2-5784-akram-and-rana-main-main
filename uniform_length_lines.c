@@ -188,3 +188,17 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
+
+int word_length(char* word) {
+    int length = 0;
+    
+    // Iterate through each character in the word
+    for (int i = 0; word[i] != '\0'; i++) {
+        // Check if the character is alphabetic
+        if (isalpha(word[i])) {
+            length++;
+        }
+    }
+
+    return length;
+}
