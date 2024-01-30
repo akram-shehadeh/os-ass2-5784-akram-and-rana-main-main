@@ -8,33 +8,68 @@ Student 2:rana shehadeh 315884379
 ----------------------------------------------------------------
 
 (calls) 1. (2 points)
+read (3, "se, and the Pearl,\n  I see where"..., 8192) = 8192
+fd is 3, indicating that the data is being read from the file descriptor 3.
+buffer is a pointer to the string "se, and the Pearl,\n  I see where".
+count is 8192, indicating that the program intends to read up 
+to 8192 bytes from the file descriptor.
 
 (calls) 2. (2 points)
-        
+ write(1, "tests/leaves-of-grass.txt: 43: 6"..., 143) = 143  
+ 1 File descriptor, 
+ indicating that the data is being written to the standard output (stdout).     
+"tests/leaves-of-grass.txt: 43: 6".  The buffer containing the data to be written.
+143  The number of bytes to write, specifying the length of the data.
+
 
 (calls) 3. (2 points)
-
+without -f flag
+    Only traces the main process.
+    Does not show system calls made by child processes.
+    Might miss important system call information if the 
+    main process forks and the child processes perform significant work.
 
 (calls) 4. (2 points)
-
+7 times
+malloc function in C is used to 
+dynamically allocate memory during program execution
 
 (calls) 5. (2 points) 
-
+2 times
+fgets function in C is used to read a line from a 
+file stream (or from stdin if the stream is stdin) 
+and store it in a character array. It reads up to a 
+specified number of characters or until a newline character is encountered.
 
 (calls) 6. (2 points)
 
 (calls) 7.:
 
   (i) execve
+  s used to execute a program. It replaces the current process 
+  image with a new one specified by the provided executable file.
 
  (ii) brk
+ sets the end of the data (heap) segment of 
+ the calling process to the specified value
 
 (iii) openat
+ is used to open or create a file or directory 
+ relative to a specified directory file descriptor
 
  (iv) mmap
+is used to map files or devices into memory. It creates a mapping 
+between a process's virtual address space and a file or device
 
   (v) prlimit64
+s used to get or set resource limits for a process. It can control various
+ resources such as CPU time, memory usage, and file size.
 
  (vi) clone
+ is used to create a new process, similar to fork. However, 
+ clone provides more options for specifying which parts of 
+ the process should be shared between the parent and child.
 
 (vii) exit_group
+ is used to terminate all threads in a process and the process itself.
+  The parameter represents the exit status of the entire process.
