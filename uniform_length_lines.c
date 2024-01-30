@@ -25,6 +25,7 @@
 /*
  * TODO: Fill in the documentation header.
  */
+/*
 int word_length(char* word) {
     int length = 0;
     
@@ -38,10 +39,12 @@ int word_length(char* word) {
 
     return length;
 }
+*/
 
 /*
  * TODO: Fill in the documentation header.
  */
+/*
 int print_uniform_length_words(FILE* inFile, char* fileName) {
     int lineCount = 0;
 
@@ -85,10 +88,12 @@ int print_uniform_length_words(FILE* inFile, char* fileName) {
 
     return lineCount;
 }
+*/
 
 /*
  * TODO: Fill in the documentation header.
  */
+
 int print_uniform_length_words(FILE* inFile, char* fileName) {
     int lineCount = 0;
 

@@ -1,0 +1,761 @@
+8007  execve("./uniform-length", ["./uniform-length", "tests/pride-sentences.txt", "tests/leaves-of-grass.txt", "tests/jekyll-hyde-sentences.txt"], 0x7ffff07b3360 /* 47 vars */) = 0
+8007  brk(NULL)                         = 0x5559a43fc000
+8007  arch_prctl(0x3001 /* ARCH_??? */, 0x7ffd30ebb5c0) = -1 EINVAL (Invalid argument)
+8007  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f966b5eb000
+8007  access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+8007  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+8007  newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=58447, ...}, AT_EMPTY_PATH) = 0
+8007  mmap(NULL, 58447, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f966b5dc000
+8007  close(3)                          = 0
+8007  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+8007  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+8007  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+8007  pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+8007  pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\302\211\332Pq\2439\235\350\223\322\257\201\326\243\f"..., 68, 896) = 68
+8007  newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+8007  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+8007  mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f966b3b3000
+8007  mprotect(0x7f966b3db000, 2023424, PROT_NONE) = 0
+8007  mmap(0x7f966b3db000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f966b3db000
+8007  mmap(0x7f966b570000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7f966b570000
+8007  mmap(0x7f966b5c9000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7f966b5c9000
+8007  mmap(0x7f966b5cf000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f966b5cf000
+8007  close(3)                          = 0
+8007  mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f966b3b0000
+8007  arch_prctl(ARCH_SET_FS, 0x7f966b3b0740) = 0
+8007  set_tid_address(0x7f966b3b0a10)   = 8007
+8007  set_robust_list(0x7f966b3b0a20, 24) = 0
+8007  rseq(0x7f966b3b10e0, 0x20, 0, 0x53053053) = 0
+8007  mprotect(0x7f966b5c9000, 16384, PROT_READ) = 0
+8007  mprotect(0x5559a318c000, 4096, PROT_READ) = 0
+8007  mprotect(0x7f966b625000, 8192, PROT_READ) = 0
+8007  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+8007  munmap(0x7f966b5dc000, 58447)     = 0
+8007  getrandom("\xac\xd8\xe3\xce\xf1\x20\x78\x6d", 8, GRND_NONBLOCK) = 8
+8007  brk(NULL)                         = 0x5559a43fc000
+8007  brk(0x5559a441d000)               = 0x5559a441d000
+8007  openat(AT_FDCWD, "tests/pride-sentences.txt", O_RDONLY) = 3
+8007  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f966b3b0a10) = 8008
+8007  close(3)                          = 0
+8007  openat(AT_FDCWD, "tests/leaves-of-grass.txt", O_RDONLY) = 3
+8007  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+8008  set_robust_list(0x7f966b3b0a20, 24 <unfinished ...>
+8007  <... clone resumed>, child_tidptr=0x7f966b3b0a10) = 8009
+8007  close(3)                          = 0
+8007  openat(AT_FDCWD, "tests/jekyll-hyde-sentences.txt", O_RDONLY) = 3
+8008  <... set_robust_list resumed>)    = 0
+8007  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f966b3b0a10) = 8010
+8008  newfstatat(3, "",  <unfinished ...>
+8010  set_robust_list(0x7f966b3b0a20, 24 <unfinished ...>
+8009  set_robust_list(0x7f966b3b0a20, 24 <unfinished ...>
+8008  <... newfstatat resumed>{st_mode=S_IFREG|0664, st_size=682092, ...}, AT_EMPTY_PATH) = 0
+8007  close(3)                          = 0
+8007  wait4(-1,  <unfinished ...>
+8010  <... set_robust_list resumed>)    = 0
+8009  <... set_robust_list resumed>)    = 0
+8008  read(3,  <unfinished ...>
+8009  newfstatat(3, "",  <unfinished ...>
+8008  <... read resumed>"Chapter 1\nIt is a truth universa"..., 8192) = 8192
+8008  newfstatat(1, "",  <unfinished ...>
+8010  newfstatat(3, "",  <unfinished ...>
+8009  <... newfstatat resumed>{st_mode=S_IFREG|0664, st_size=762292, ...}, AT_EMPTY_PATH) = 0
+8010  <... newfstatat resumed>{st_mode=S_IFREG|0664, st_size=138488, ...}, AT_EMPTY_PATH) = 0
+8008  <... newfstatat resumed>{st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+8009  read(3,  <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 1: 7:"..., 84 <unfinished ...>
+8010  read(3,  <unfinished ...>
+8008  <... write resumed>)              = 84
+8010  <... read resumed>"THE STRANGE CASE OF DR. JEKYLL A"..., 8192) = 8192
+8009  <... read resumed>"\357\273\277The Project Gutenberg eBook o"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 3: 2:"..., 38) = 38
+8010  newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+8009  newfstatat(1, "",  <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 4: 6:"..., 42 <unfinished ...>
+8010  write(1, "tests/jekyll-hyde-sentences.txt:"..., 49 <unfinished ...>
+8009  <... newfstatat resumed>{st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+8008  <... write resumed>)              = 42
+8010  <... write resumed>)              = 49
+8009  write(1, "tests/leaves-of-grass.txt: 1: 8:"..., 42 <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... write resumed>)              = 42
+8008  <... read resumed>"s; or me, either, for that matte"..., 8192) = 8192
+8010  read(3, "r in the morning and come out wi"..., 8192) = 8192
+8009  read(3,  <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 5: 7:"..., 117 <unfinished ...>
+8010  read(3,  <unfinished ...>
+8009  <... read resumed>"\231d with eidolons only.\n\n       T"..., 8192) = 8192
+8008  <... write resumed>)              = 117
+8009  write(1, "tests/leaves-of-grass.txt: 2: 8:"..., 190 <unfinished ...>
+8008  read(3,  <unfinished ...>
+8010  <... read resumed>"ekyll became too fanciful for me"..., 8192) = 8192
+8010  write(1, "tests/jekyll-hyde-sentences.txt:"..., 43 <unfinished ...>
+8009  <... write resumed>)              = 190
+8008  <... read resumed>"Everybody said how well she look"..., 8192) = 8192
+8010  <... write resumed>)              = 43
+8009  write(1, "tests/leaves-of-grass.txt: 6: 4:"..., 83 <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 8: 2:"..., 38 <unfinished ...>
+8009  <... write resumed>)              = 83
+8010  read(3,  <unfinished ...>
+8008  <... write resumed>)              = 38
+8009  read(3,  <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 9: 7:"..., 117 <unfinished ...>
+8010  <... read resumed>"uman!\nSomething troglodytic, sha"..., 8192) = 8192
+8010  read(3,  <unfinished ...>
+8009  <... read resumed>"he darkness.\n\n  I am a man who, "..., 8192) = 8192
+8008  <... write resumed>)              = 117
+8010  <... read resumed>"t off my mind if you would promi"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 8: 12"..., 55 <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... write resumed>)              = 55
+8010  write(1, "tests/jekyll-hyde-sentences.txt:"..., 45 <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 9: 11"..., 54 <unfinished ...>
+8008  <... read resumed>"rket town; and, in quitting them"..., 8192) = 8192
+8009  <... write resumed>)              = 54
+8009  write(1, "tests/leaves-of-grass.txt: 10: 7"..., 49) = 49
+8010  <... write resumed>)              = 45
+8008  write(1, "tests/pride-sentences.txt: 12: 7"..., 80 <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 11: 6"..., 97 <unfinished ...>
+8010  read(3,  <unfinished ...>
+8008  <... write resumed>)              = 80
+8009  <... write resumed>)              = 97
+8009  read(3,  <unfinished ...>
+8008  read(3,  <unfinished ...>
+8010  <... read resumed>"; clothes lay about the floor, w"..., 8192) = 8192
+8009  <... read resumed>"silent?\n  What do you need camer"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 13: 7"..., 49) = 49
+8008  <... read resumed>" has since dined with him in com"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 14: 2"..., 96) = 96
+8009  write(1, "tests/leaves-of-grass.txt: 16: 7"..., 49 <unfinished ...>
+8008  read(3,  <unfinished ...>
+8010  read(3,  <unfinished ...>
+8009  <... write resumed>)              = 49
+8009  read(3, "y times?)\n\n  No dainty dolce aff"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 17: 7"..., 145 <unfinished ...>
+8010  <... read resumed>"above all since Guest, being a g"..., 8192) = 8192
+8008  <... read resumed>"y evenings in this manner - in s"..., 8192) = 8192
+8009  <... write resumed>)              = 145
+8010  write(1, "tests/jekyll-hyde-sentences.txt:"..., 44 <unfinished ...>
+8009  read(3,  <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 14: 7"..., 198 <unfinished ...>
+8009  <... read resumed>"my folks or of myself, or ill-do"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 20: 8"..., 51 <unfinished ...>
+8010  <... write resumed>)              = 44
+8008  <... write resumed>)              = 198
+8010  write(1, "tests/jekyll-hyde-sentences.txt:"..., 45 <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... write resumed>)              = 51
+8010  <... write resumed>)              = 45
+8008  <... read resumed>"as all in pursuit of Mr. Bingley"..., 8192) = 8192
+8009  read(3, "\n      beard and curls protected"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 19: 2"..., 39 <unfinished ...>
+8010  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 21: 5"..., 96 <unfinished ...>
+8008  <... write resumed>)              = 39
+8009  <... write resumed>)              = 96
+8010  <... read resumed>"oyalty, and broke the seal.\nWith"..., 8192) = 8192
+8008  read(3,  <unfinished ...>
+8009  read(3, "-path, the book-keeper counts at"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 23: 1"..., 54) = 54
+8008  <... read resumed>"; but his sisters gave it their "..., 8192) = 8192
+8010  write(1, "tests/jekyll-hyde-sentences.txt:"..., 46 <unfinished ...>
+8009  read(3, "have no prouder than the level I"..., 8192) = 8192
+8010  <... write resumed>)              = 46
+8009  write(1, "tests/leaves-of-grass.txt: 24: 5"..., 101 <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 20: 7"..., 85 <unfinished ...>
+8010  write(1, "tests/jekyll-hyde-sentences.txt:"..., 47 <unfinished ...>
+8009  <... write resumed>)              = 101
+8008  <... write resumed>)              = 85
+8009  write(1, "tests/leaves-of-grass.txt: 26: 1"..., 55 <unfinished ...>
+8010  <... write resumed>)              = 47
+8008  write(1, "tests/pride-sentences.txt: 22: 2"..., 39 <unfinished ...>
+8009  <... write resumed>)              = 55
+8008  <... write resumed>)              = 39
+8009  read(3, "oment and whatever happens thril"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 27: 7"..., 102) = 102
+8008  read(3,  <unfinished ...>
+8009  read(3, "c rocks send their old heat agai"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 29: 7"..., 106) = 106
+8008  <... read resumed>"while with Jane, on Miss Bingley"..., 8192) = 8192
+8010  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 31: 6"..., 99) = 99
+8008  write(1, "tests/pride-sentences.txt: 23: 7"..., 80 <unfinished ...>
+8010  <... read resumed>"l right,\" said Poole.\n\"Open the "..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 33: 8"..., 51) = 51
+8008  <... write resumed>)              = 80
+8010  write(1, "tests/jekyll-hyde-sentences.txt:"..., 183 <unfinished ...>
+8009  read(3,  <unfinished ...>
+8010  <... write resumed>)              = 183
+8009  <... read resumed>"s, and I in the middle;\n  Coming"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 25: 2"..., 39 <unfinished ...>
+8010  write(1, "tests/jekyll-hyde-sentences.txt:"..., 47 <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 34: 3"..., 97 <unfinished ...>
+8008  <... write resumed>)              = 39
+8008  write(1, "tests/pride-sentences.txt: 26: 2"..., 38 <unfinished ...>
+8010  <... write resumed>)              = 47
+8009  <... write resumed>)              = 97
+8009  read(3,  <unfinished ...>
+8008  <... write resumed>)              = 38
+8010  read(3,  <unfinished ...>
+8009  <... read resumed>"\n  Along the lower\342\200\231d eve he ca"..., 8192) = 8192
+8009  read(3,  <unfinished ...>
+8008  read(3,  <unfinished ...>
+8010  <... read resumed>", indeed,\" returned the butler.\n"..., 8192) = 8192
+8009  <... read resumed>"lacing Manito loose, Allah on a "..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 36: 6"..., 93) = 93
+8009  write(1, "tests/leaves-of-grass.txt: 38: 9"..., 51) = 51
+8009  read(3, "ety,\n  And other births will bri"..., 8192) = 8192
+8009  read(3, " The young mother and old mother"..., 8192) = 8192
+8009  read(3, "e, commanding all, from him perm"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 39: 4"..., 182) = 182
+8009  read(3, "s him, he likes it always, he br"..., 8192) = 8192
+8009  read(3, " dare not withdraw till I deposi"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 43: 6"..., 143) = 143
+8009  write(1, "tests/leaves-of-grass.txt: 46: 3"..., 45) = 45
+8008  <... read resumed>" Colonel Forster it will be quit"..., 8192) = 8192
+8010  write(1, "tests/jekyll-hyde-sentences.txt:"..., 50 <unfinished ...>
+8009  read(3, "nerals,\n  We are two predatory h"..., 8192) = 8192
+8009  read(3,  <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 27: 7"..., 80 <unfinished ...>
+8010  <... write resumed>)              = 50
+8009  <... read resumed>",\n  But you will last very long."..., 8192) = 8192
+8008  <... write resumed>)              = 80
+8009  read(3,  <unfinished ...>
+8010  write(1, "tests/jekyll-hyde-sentences.txt:"..., 47 <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... read resumed>"the close of his crowded course."..., 8192) = 8192
+8009  read(3,  <unfinished ...>
+8010  <... write resumed>)              = 47
+8008  <... read resumed>" no sacrifice on my side; and Mr"..., 8192) = 8192
+8009  <... read resumed>" I look upon you,\n  You must be "..., 8192) = 8192
+8010  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 47: 7"..., 101 <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 29: 2"..., 39 <unfinished ...>
+8009  <... write resumed>)              = 101
+8008  <... write resumed>)              = 39
+8010  <... read resumed>"always bringing him,\" said Poole"..., 8192) = 8192
+8009  read(3,  <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 30: 3"..., 39 <unfinished ...>
+8010  write(1, "tests/jekyll-hyde-sentences.txt:"..., 130 <unfinished ...>
+8009  <... read resumed>"e resistless than I can tell, th"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 49: 1"..., 103 <unfinished ...>
+8008  <... write resumed>)              = 39
+8009  <... write resumed>)              = 103
+8010  <... write resumed>)              = 130
+8009  read(3,  <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 31: 7"..., 45 <unfinished ...>
+8009  <... read resumed>"se, and the Pearl,\n  I see where"..., 8192) = 8192
+8008  <... write resumed>)              = 45
+8010  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 51: 5"..., 98) = 98
+8009  read(3,  <unfinished ...>
+8008  read(3,  <unfinished ...>
+8010  <... read resumed>", and drove straight to Jekyll's"..., 8192) = 8192
+8009  <... read resumed>"right upon the earth,\n  Each of "..., 8192) = 8192
+8008  <... read resumed>"meeting.\nIt would surely be much"..., 8192) = 8192
+8009  read(3, " of the soul,\n  The efflux of th"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 32: 7"..., 80 <unfinished ...>
+8010  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 53: 1"..., 55) = 55
+8008  <... write resumed>)              = 80
+8010  <... read resumed>"distress may be counted as a kin"..., 8192) = 8192
+8009  read(3, "amboats, in the public assembly,"..., 8192) = 8192
+8010  read(3,  <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 54: 1"..., 53) = 53
+8008  <... read resumed>" former.\nElizabeth took leave of"..., 8192) = 8192
+8010  <... read resumed>"uired; and late one accursed nig"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 55: 1"..., 53) = 53
+8008  write(1, "tests/pride-sentences.txt: 34: 7"..., 121 <unfinished ...>
+8010  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 56: 7"..., 52) = 52
+8008  <... write resumed>)              = 121
+8010  <... read resumed>"ommitted it) I have no design of"..., 8192) = 8192
+8009  read(3,  <unfinished ...>
+8008  read(3,  <unfinished ...>
+8010  read(3,  <unfinished ...>
+8009  <... read resumed>" Play\342\200\231d the part that still lo"..., 8192) = 8192
+8009  read(3, "themselves in the ways of him, h"..., 8192) = 8192
+8010  <... read resumed>"en guilty of that crime upon so "..., 8192) = 8192
+8008  <... read resumed>".\nHe had not been long seated be"..., 8192) = 8192
+8009  read(3, "ld, the negro-cabins, drivers dr"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 57: 4"..., 190) = 190
+8008  write(1, "tests/pride-sentences.txt: 37: 7"..., 81 <unfinished ...>
+8010  read(3,  <unfinished ...>
+8009  read(3, "ir color becomes scarlet.\n\n  Ano"..., 8192) = 8192
+8008  <... write resumed>)              = 81
+8009  write(1, "tests/leaves-of-grass.txt: 61: 1"..., 53) = 53
+8008  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 62: 6"..., 48 <unfinished ...>
+8008  <... read resumed>"villy for Lydia's interruption, "..., 8192) = 8192
+8010  <... read resumed>"atred.\nAnd when at last, thinkin"..., 8192) = 7416
+8009  <... write resumed>)              = 48
+8009  read(3,  <unfinished ...>
+8010  read(3,  <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... read resumed>"e grass amid and upon,\n  To be l"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 63: 8"..., 50 <unfinished ...>
+8010  <... read resumed>"", 8192)       = 0
+8008  <... read resumed>"quiries about the other; of whom"..., 8192) = 8192
+8009  <... write resumed>)              = 50
+8009  write(1, "tests/leaves-of-grass.txt: 64: 1"..., 57) = 57
+8009  write(1, "tests/leaves-of-grass.txt: 65: 7"..., 49) = 49
+8010  close(3 <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 66: 5"..., 97 <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... write resumed>)              = 97
+8009  read(3, "t is belov\342\200\231d by these, and lov"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 68: 5"..., 143 <unfinished ...>
+8010  <... close resumed>)              = 0
+8008  <... read resumed>"man.\" Wickham only shook his hea"..., 8192) = 8192
+8009  <... write resumed>)              = 143
+8009  write(1, "tests/leaves-of-grass.txt: 71: 1"..., 53) = 53
+8009  read(3,  <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 39: 7"..., 162 <unfinished ...>
+8009  <... read resumed>" The sheriff at hand with his de"..., 8192) = 8192
+8008  <... write resumed>)              = 162
+8009  write(1, "tests/leaves-of-grass.txt: 72: 4"..., 91) = 91
+8009  read(3,  <unfinished ...>
+8010  write(1, "tests/jekyll-hyde-sentences.txt:"..., 46 <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 43: 6"..., 44 <unfinished ...>
+8009  <... read resumed>" learn what a\n      composing-st"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 74: 8"..., 50) = 50
+8009  write(1, "tests/leaves-of-grass.txt: 75: 1"..., 58 <unfinished ...>
+8010  <... write resumed>)              = 46
+8008  <... write resumed>)              = 44
+8009  <... write resumed>)              = 58
+8009  read(3,  <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 44: 3"..., 40 <unfinished ...>
+8010  exit_group(18 <unfinished ...>
+8009  <... read resumed>"ducts gross or lucre--\n      it "..., 8192) = 8192
+8009  read(3,  <unfinished ...>
+8010  <... exit_group resumed>)         = ?
+8008  <... write resumed>)              = 40
+8009  <... read resumed>"      cannot remember my own foo"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 76: 5"..., 197 <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... write resumed>)              = 197
+8009  read(3,  <unfinished ...>
+8008  <... read resumed>"ly amiable, be in friendship wit"..., 8192) = 8192
+8010  +++ exited with 18 +++
+8009  <... read resumed>", sail-maker, block-maker,\n  Goo"..., 8192) = 8192
+8007  <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 18}], 0, NULL) = 8010
+8009  write(1, "tests/leaves-of-grass.txt: 80: 8"..., 50 <unfinished ...>
+8007  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=8010, si_uid=1000, si_status=18, si_utime=0, si_stime=0} ---
+8009  <... write resumed>)              = 50
+8007  wait4(-1,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 81: 1"..., 53) = 53
+8009  read(3,  <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 45: 7"..., 79 <unfinished ...>
+8009  <... read resumed>",\n  The soul\342\200\231s realization and"..., 8192) = 8192
+8009  read(3, "he foremost,\n       Pioneers! O "..., 8192) = 8192
+8009  read(3, "ain,\n      passion, dissolution."..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 82: 3"..., 233) = 233
+8009  read(3, "\n  Its sun, and its again, all s"..., 8192) = 8192
+8008  <... write resumed>)              = 79
+8009  write(1, "tests/leaves-of-grass.txt: 87: 6"..., 140) = 140
+8009  write(1, "tests/leaves-of-grass.txt: 90: 7"..., 186 <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 47: 2"..., 39 <unfinished ...>
+8009  <... write resumed>)              = 186
+8009  write(1, "tests/leaves-of-grass.txt: 94: 8"..., 50) = 50
+8009  read(3, "nd more delicious than any,\n  Fr"..., 8192) = 8192
+8008  <... write resumed>)              = 39
+8009  write(1, "tests/leaves-of-grass.txt: 95: 4"..., 42) = 42
+8009  write(1, "tests/leaves-of-grass.txt: 96: 5"..., 348 <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... write resumed>)              = 348
+8008  <... read resumed>"son, for though they each, like "..., 8192) = 8192
+8009  read(3, " in sweet\n      garments, bendin"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 104: "..., 84 <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... write resumed>)              = 84
+8008  <... read resumed>"are dancing?\"\n\"Sometimes.\nOne mu"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 106: "..., 97) = 97
+8008  write(1, "tests/pride-sentences.txt: 48: 7"..., 167 <unfinished ...>
+8009  read(3, "  Then dearest child mournest th"..., 8192) = 8192
+8008  <... write resumed>)              = 167
+8009  read(3, "entre-piece for them;\n  Look, al"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 108: "..., 224) = 224
+8009  write(1, "tests/leaves-of-grass.txt: 113: "..., 41 <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 52: 2"..., 38 <unfinished ...>
+8009  <... write resumed>)              = 41
+8008  <... write resumed>)              = 38
+8009  write(1, "tests/leaves-of-grass.txt: 114: "..., 44) = 44
+8009  write(1, "tests/leaves-of-grass.txt: 115: "..., 48) = 48
+8008  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 116: "..., 50) = 50
+8008  <... read resumed>"ces which have principally offen"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 117: "..., 52) = 52
+8008  read(3,  <unfinished ...>
+8009  read(3, "erve the slights and degradation"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 118: "..., 43 <unfinished ...>
+8008  <... read resumed>"oing!\"\n Nothing that she could s"..., 8192) = 8192
+8009  <... write resumed>)              = 43
+8009  write(1, "tests/leaves-of-grass.txt: 119: "..., 45 <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... write resumed>)              = 45
+8008  <... read resumed>"nce extended only to the followi"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 120: "..., 43) = 43
+8008  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 121: "..., 43) = 43
+8008  <... read resumed>"xceedingly.\nIf what I have hithe"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 122: "..., 90) = 90
+8008  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 124: "..., 50) = 50
+8008  <... read resumed>"or my poor nerves.\"\n Charlotte's"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 125: "..., 52) = 52
+8008  read(3,  <unfinished ...>
+8009  read(3,  <unfinished ...>
+8008  <... read resumed>" it again, we have determined on"..., 8192) = 8192
+8009  <... read resumed>"icines,\n  The women volunteering"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 126: "..., 95) = 95
+8008  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 128: "..., 50 <unfinished ...>
+8008  <... read resumed>"ted her to name the day that was"..., 8192) = 8192
+8008  read(3,  <unfinished ...>
+8009  <... write resumed>)              = 50
+8008  <... read resumed>"self appeared, sent by his daugh"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 129: "..., 48) = 48
+8008  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 130: "..., 51) = 51
+8008  <... read resumed>"is house, that I should be force"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 131: "..., 49) = 49
+8008  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 132: "..., 50) = 50
+8008  <... read resumed>"ish many things besides his happ"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 133: "..., 48) = 48
+8008  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 134: "..., 49) = 49
+8008  <... read resumed>"ome may be as useful as anything"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 135: "..., 50) = 50
+8008  write(1, "tests/pride-sentences.txt: 53: 7"..., 483 <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 136: "..., 91) = 91
+8008  <... write resumed>)              = 483
+8009  read(3, " the precious results of peace, "..., 8192) = 8192
+8008  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 138: "..., 98) = 98
+8008  <... read resumed>" The wedding took place; the bri"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 140: "..., 50) = 50
+8008  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 141: "..., 50) = 50
+8009  write(1, "tests/leaves-of-grass.txt: 142: "..., 48) = 48
+8009  write(1, "tests/leaves-of-grass.txt: 143: "..., 106 <unfinished ...>
+8008  <... read resumed>"ty and Lydia take his defection "..., 8192) = 8192
+8009  <... write resumed>)              = 106
+8008  write(1, "tests/pride-sentences.txt: 65: 7"..., 81 <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 145: "..., 54) = 54
+8008  <... write resumed>)              = 81
+8009  read(3,  <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 67: 2"..., 38 <unfinished ...>
+8009  <... read resumed>"ow bright the\n      flashes of l"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 146: "..., 57 <unfinished ...>
+8008  <... write resumed>)              = 38
+8009  <... write resumed>)              = 57
+8008  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 147: "..., 98) = 98
+8008  <... read resumed>" and Charlotte appeared at the d"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 149: "..., 49) = 49
+8008  write(1, "tests/pride-sentences.txt: 68: 7"..., 81 <unfinished ...>
+8009  read(3, "conclude\n      with applause,\n  "..., 8192) = 8192
+8008  <... write resumed>)              = 81
+8009  write(1, "tests/leaves-of-grass.txt: 150: "..., 53) = 53
+8008  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 151: "..., 51) = 51
+8008  <... read resumed>"hat we should receive an invitat"..., 8192) = 8192
+8009  read(3, "u brave boy, (I could not save y"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 70: 7"..., 80 <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 152: "..., 55) = 55
+8008  <... write resumed>)              = 80
+8009  write(1, "tests/leaves-of-grass.txt: 153: "..., 55 <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... write resumed>)              = 55
+8008  <... read resumed>"I suppose you had no opportunity"..., 8192) = 8192
+8009  read(3, "   3\n  On, on I go, (open doors "..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 72: 3"..., 78 <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 154: "..., 50) = 50
+8008  <... write resumed>)              = 78
+8009  write(1, "tests/leaves-of-grass.txt: 155: "..., 51) = 51
+8008  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 156: "..., 104) = 104
+8008  <... read resumed>"en great enjoyment out of doors."..., 8192) = 8192
+8009  read(3, "ny living thing, will so cohere."..., 8192) = 8192
+8008  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 158: "..., 90) = 90
+8008  <... read resumed>"ce long enough to know that you "..., 8192) = 8192
+8009  read(3,  <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... read resumed>"ow, to understand--nor\n      am "..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 160: "..., 52) = 52
+8008  <... read resumed>"rtune to make the expenses of tr"..., 8192) = 8192
+8009  read(3, "s of roses,\n  O death, I cover y"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 161: "..., 54 <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... write resumed>)              = 54
+8009  read(3, "e mother suffer\342\200\231d,\n  And the w"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 162: "..., 52 <unfinished ...>
+8008  <... read resumed>"t make him fancy her affected wi"..., 8192) = 8192
+8009  <... write resumed>)              = 52
+8009  write(1, "tests/leaves-of-grass.txt: 163: "..., 50) = 50
+8009  write(1, "tests/leaves-of-grass.txt: 164: "..., 100 <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 74: 7"..., 203 <unfinished ...>
+8009  <... write resumed>)              = 100
+8009  read(3, "t parts substances, earth, water"..., 8192) = 8192
+8009  read(3,  <unfinished ...>
+8008  <... write resumed>)              = 203
+8009  <... read resumed>"oth I saw there leaping.)\n\n     "..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 166: "..., 197) = 197
+8009  read(3, "(that war so bloody and grim, th"..., 8192) = 8192
+8008  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 170: "..., 91) = 91
+8009  read(3, " slow step through the wounded a"..., 8192) = 8192
+8008  <... read resumed>"very differently affected, when,"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 172: "..., 105) = 105
+8009  read(3, "ows,\n  Vehicles, teams, the heav"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 174: "..., 241 <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... write resumed>)              = 241
+8009  read(3, "d the infidel come into full pos"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 179: "..., 57 <unfinished ...>
+8008  <... read resumed>"rst moment, I may almost say - o"..., 8192) = 8192
+8009  <... write resumed>)              = 57
+8009  write(1, "tests/leaves-of-grass.txt: 180: "..., 147) = 147
+8009  read(3, "ther\342\200\231d to Sunday church in pri"..., 8192) = 8192
+8008  read(3,  <unfinished ...>
+8009  write(1, "tests/leaves-of-grass.txt: 183: "..., 50) = 50
+8009  write(1, "tests/leaves-of-grass.txt: 184: "..., 44) = 44
+8009  read(3, "ncentration, determination, and "..., 8192) = 8192
+8008  <... read resumed>" force of passion to put aside, "..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 185: "..., 56) = 56
+8009  write(1, "tests/leaves-of-grass.txt: 186: "..., 89 <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... write resumed>)              = 89
+8009  write(1, "tests/leaves-of-grass.txt: 188: "..., 44 <unfinished ...>
+8008  <... read resumed>"t with the lady who presided ove"..., 8192) = 8192
+8009  <... write resumed>)              = 44
+8009  read(3,  <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... read resumed>"el\n\n  Where the city\342\200\231s ceasele"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 189: "..., 101) = 101
+8009  write(1, "tests/leaves-of-grass.txt: 191: "..., 42 <unfinished ...>
+8008  <... read resumed>"ying to him, but the idea was ch"..., 8192) = 8192
+8009  <... write resumed>)              = 42
+8009  write(1, "tests/leaves-of-grass.txt: 192: "..., 52 <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... write resumed>)              = 52
+8009  write(1, "tests/leaves-of-grass.txt: 193: "..., 41 <unfinished ...>
+8008  <... read resumed>"I am sure.\"\n\"I am much obliged t"..., 8192) = 8192
+8009  <... write resumed>)              = 41
+8009  read(3,  <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 79: 7"..., 204 <unfinished ...>
+8009  <... read resumed>"therhood,\n  Of terror to the tyr"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 194: "..., 52) = 52
+8009  write(1, "tests/leaves-of-grass.txt: 195: "..., 52 <unfinished ...>
+8008  <... write resumed>)              = 204
+8009  <... write resumed>)              = 52
+8009  read(3,  <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 84: 2"..., 39 <unfinished ...>
+8009  <... read resumed>"hee they tend,\n  Parting the mid"..., 8192) = 8192
+8009  read(3, "rs\n      of harmonies,\n  Nor str"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 196: "..., 140) = 140
+8009  read(3,  <unfinished ...>
+8008  <... write resumed>)              = 39
+8009  <... read resumed>"\n  To the south the great seas a"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 199: "..., 96) = 96
+8009  read(3,  <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 85: 2"..., 38 <unfinished ...>
+8009  <... read resumed>" Thee,\n  Or small or great I kno"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 201: "..., 52) = 52
+8009  write(1, "tests/leaves-of-grass.txt: 202: "..., 52 <unfinished ...>
+8008  <... write resumed>)              = 38
+8009  <... write resumed>)              = 52
+8009  read(3,  <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... read resumed>"e southern braves confided to hi"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 203: "..., 52) = 52
+8009  write(1, "tests/leaves-of-grass.txt: 204: "..., 96 <unfinished ...>
+8008  <... read resumed>"e been a daily witness of; and a"..., 8192) = 8192
+8009  <... write resumed>)              = 96
+8009  read(3,  <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 86: 7"..., 122 <unfinished ...>
+8009  <... read resumed>"our part,\n  To think that we are"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 206: "..., 91) = 91
+8009  read(3,  <unfinished ...>
+8008  <... write resumed>)              = 122
+8009  <... read resumed>"fect;\n  Slowly and surely they h"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 208: "..., 50) = 50
+8009  write(1, "tests/leaves-of-grass.txt: 209: "..., 94 <unfinished ...>
+8008  read(3,  <unfinished ...>
+8009  <... write resumed>)              = 94
+8009  write(1, "tests/leaves-of-grass.txt: 211: "..., 47 <unfinished ...>
+8008  <... read resumed>" at Colonel Forster's.\nKitty and"..., 8192) = 8192
+8009  <... write resumed>)              = 47
+8009  read(3, "t the orbs and the systems of or"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 212: "..., 51) = 51
+8009  write(1, "tests/leaves-of-grass.txt: 213: "..., 89) = 89
+8009  read(3, "nion, and how it may be accompli"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 215: "..., 89) = 89
+8009  read(3, "lt soar toward the fulfilment of"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 217: "..., 86) = 86
+8009  write(1, "tests/leaves-of-grass.txt: 219: "..., 51) = 51
+8009  read(3, "phy cannot go and does not wish "..., 8192) = 8192
+8009  read(3, "ed by reptiles, resounding with "..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 220: "..., 237) = 237
+8009  write(1, "tests/leaves-of-grass.txt: 225: "..., 51) = 51
+8009  write(1, "tests/leaves-of-grass.txt: 226: "..., 45) = 45
+8009  write(1, "tests/leaves-of-grass.txt: 227: "..., 44) = 44
+8009  read(3, "ing priest, (soon, soon deserted"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 228: "..., 43) = 43
+8009  write(1, "tests/leaves-of-grass.txt: 229: "..., 54) = 54
+8009  write(1, "tests/leaves-of-grass.txt: 230: "..., 91) = 91
+8009  read(3, "ously won,\n  Now thou stridest o"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 232: "..., 52) = 52
+8009  write(1, "tests/leaves-of-grass.txt: 233: "..., 44) = 44
+8009  write(1, "tests/leaves-of-grass.txt: 234: "..., 56) = 56
+8009  read(3, "e democratic masses too,\n      s"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 235: "..., 49) = 49
+8009  write(1, "tests/leaves-of-grass.txt: 236: "..., 97) = 97
+8009  read(3, "sleep pass\342\200\231d over, and resume "..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 238: "..., 50) = 50
+8009  write(1, "tests/leaves-of-grass.txt: 239: "..., 43) = 43
+8009  write(1, "tests/leaves-of-grass.txt: 240: "..., 50) = 50
+8009  write(1, "tests/leaves-of-grass.txt: 241: "..., 47) = 47
+8009  write(1, "tests/leaves-of-grass.txt: 242: "..., 44) = 44
+8009  read(3, "e of sweet brooks of drinking-wa"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 243: "..., 89) = 89
+8009  write(1, "tests/leaves-of-grass.txt: 245: "..., 44) = 44
+8009  read(3, "u, ye lost designs alone--nor fa"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 246: "..., 57) = 57
+8009  write(1, "tests/leaves-of-grass.txt: 247: "..., 44) = 44
+8009  read(3, " tints of love and pride and dou"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 248: "..., 49) = 49
+8009  write(1, "tests/leaves-of-grass.txt: 249: "..., 45) = 45
+8009  write(1, "tests/leaves-of-grass.txt: 250: "..., 51) = 51
+8009  write(1, "tests/leaves-of-grass.txt: 251: "..., 40) = 40
+8009  write(1, "tests/leaves-of-grass.txt: 252: "..., 51) = 51
+8009  read(3, ", vaguely form\342\200\231d, altogether c"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 253: "..., 138) = 138
+8009  write(1, "tests/leaves-of-grass.txt: 256: "..., 144) = 144
+8009  read(3, "cts and groups, bearings, faces,"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 259: "..., 48) = 48
+8009  write(1, "tests/leaves-of-grass.txt: 260: "..., 58) = 58
+8009  write(1, "tests/leaves-of-grass.txt: 261: "..., 48) = 48
+8009  read(3, "y primitive taste to breathe wit"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 262: "..., 51) = 51
+8009  write(1, "tests/leaves-of-grass.txt: 263: "..., 56) = 56
+8009  write(1, "tests/leaves-of-grass.txt: 264: "..., 51) = 51
+8009  write(1, "tests/leaves-of-grass.txt: 265: "..., 43) = 43
+8009  write(1, "tests/leaves-of-grass.txt: 266: "..., 49) = 49
+8009  read(3, "ir,\n  On the slope of a teeming "..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 267: "..., 43) = 43
+8009  write(1, "tests/leaves-of-grass.txt: 268: "..., 98) = 98
+8009  write(1, "tests/leaves-of-grass.txt: 270: "..., 95) = 95
+8009  write(1, "tests/leaves-of-grass.txt: 272: "..., 49) = 49
+8009  write(1, "tests/leaves-of-grass.txt: 273: "..., 63) = 63
+8009  read(3, " of Use and Redistributing Proje"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 274: "..., 50) = 50
+8009  read(3,  <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 89: 4"..., 40 <unfinished ...>
+8009  <... read resumed>" for free\n        distribution o"..., 8192) = 8192
+8009  write(1, "tests/leaves-of-grass.txt: 275: "..., 40) = 40
+8009  write(1, "tests/leaves-of-grass.txt: 276: "..., 43 <unfinished ...>
+8008  <... write resumed>)              = 40
+8009  <... write resumed>)              = 43
+8008  write(1, "tests/pride-sentences.txt: 90: 7"..., 117 <unfinished ...>
+8009  read(3, "s, we do not\nnecessarily keep eB"..., 8192) = 436
+8009  write(1, "tests/leaves-of-grass.txt: 277: "..., 44) = 44
+8009  read(3,  <unfinished ...>
+8008  <... write resumed>)              = 117
+8009  <... read resumed>"", 8192)       = 0
+8009  close(3)                          = 0
+8009  exit_group(277 <unfinished ...>
+8008  write(1, "tests/pride-sentences.txt: 93: 2"..., 38 <unfinished ...>
+8009  <... exit_group resumed>)         = ?
+8009  +++ exited with 21 +++
+8008  <... write resumed>)              = 38
+8007  <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 21}], 0, NULL) = 8009
+8007  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=8009, si_uid=1000, si_status=21, si_utime=0, si_stime=0} ---
+8008  read(3,  <unfinished ...>
+8007  wait4(-1,  <unfinished ...>
+8008  <... read resumed>"ckham to Mr. Darcy, for now they"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 94: 9"..., 46) = 46
+8008  read(3, "eral behaviour, the little advan"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 95: 3"..., 118) = 118
+8008  read(3, "deter him from such foul miscond"..., 8192) = 8192
+8008  read(3, "ght there might have been time e"..., 8192) = 8192
+8008  read(3, "ed out very wild.\"\nMrs. Gardiner"..., 8192) = 8192
+8008  read(3, " other two that they now saw Mr."..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 98: 7"..., 121) = 121
+8008  read(3, "for me - it cannot be for my sak"..., 8192) = 8192
+8008  read(3, "ngs was at every moment increasi"..., 8192) = 8192
+8008  read(3, " Darcy.\nThere was now an interes"..., 8192) = 8192
+8008  read(3, "er brother's entrance, exerted h"..., 8192) = 8192
+8008  read(3, "hardly know what I have written."..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 101: "..., 174) = 174
+8008  write(1, "tests/pride-sentences.txt: 105: "..., 42) = 42
+8008  write(1, "tests/pride-sentences.txt: 106: "..., 40) = 40
+8008  read(3, "humiliation, the misery she was "..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 107: "..., 82) = 82
+8008  read(3, " this is not likely.\nHis most pa"..., 8192) = 8192
+8008  read(3, "ght be expected; with tears and "..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 109: "..., 78) = 78
+8008  read(3, ", and if you cannot guess with w"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 111: "..., 45) = 45
+8008  write(1, "tests/pride-sentences.txt: 112: "..., 40) = 40
+8008  write(1, "tests/pride-sentences.txt: 113: "..., 40) = 40
+8008  read(3, "g to look forward to.\nEvery day "..., 8192) = 8192
+8008  read(3, "he next ten years, I will take y"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 114: "..., 132) = 132
+8008  write(1, "tests/pride-sentences.txt: 117: "..., 41) = 41
+8008  write(1, "tests/pride-sentences.txt: 118: "..., 46) = 46
+8008  write(1, "tests/pride-sentences.txt: 119: "..., 40) = 40
+8008  write(1, "tests/pride-sentences.txt: 120: "..., 43) = 43
+8008  write(1, "tests/pride-sentences.txt: 121: "..., 39) = 39
+8008  read(3, "d perfectly ignorant of what had"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 122: "..., 82) = 82
+8008  write(1, "tests/pride-sentences.txt: 124: "..., 39) = 39
+8008  read(3, "and her words ran wholly on thos"..., 8192) = 8192
+8008  read(3, "that Wickham should consent to s"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 125: "..., 163) = 163
+8008  read(3, "by the bye, you are to understan"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 129: "..., 40) = 40
+8008  read(3, "mes, for there was much to be di"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 130: "..., 81) = 81
+8008  read(3, "friends; and now we are better.\""..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 132: "..., 42) = 42
+8008  write(1, "tests/pride-sentences.txt: 133: "..., 90) = 90
+8008  read(3, " one of my daughters.\nBut it end"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 135: "..., 201) = 201
+8008  read(3, "pose you have heard of his leavi"..., 8192) = 8192
+8008  read(3, "pportunity of saying:\n\"Is your s"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 140: "..., 121) = 121
+8008  write(1, "tests/pride-sentences.txt: 143: "..., 83) = 83
+8008  read(3, "her letter was finished, she saw"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 145: "..., 39) = 39
+8008  write(1, "tests/pride-sentences.txt: 146: "..., 39) = 39
+8008  write(1, "tests/pride-sentences.txt: 147: "..., 39) = 39
+8008  read(3, "uckiest family in the world, tho"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 148: "..., 121) = 121
+8008  read(3, "\nYou both did as much as you cou"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 151: "..., 42) = 42
+8008  read(3, "therine), had only set that down"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 152: "..., 121) = 121
+8008  write(1, "tests/pride-sentences.txt: 155: "..., 40) = 40
+8008  read(3, "elly mortified her, by what he s"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 156: "..., 82) = 82
+8008  read(3, "retrospections must be so totall"..., 8192) = 8192
+8008  read(3, " anything rather than marry with"..., 8192) = 8192
+8008  read(3, "he others with tolerable composu"..., 8192) = 8192
+8008  write(1, "tests/pride-sentences.txt: 158: "..., 122) = 122
+8008  read(3, "t creature in the world.\nPerhaps"..., 8192) = 8192
+8008  read(3, "hint to be gone.\nMiss Bingley wa"..., 8192) = 2156
+8008  read(3, "", 8192)                 = 0
+8008  close(3)                          = 0
+8008  write(1, "tests/pride-sentences.txt: 161: "..., 84) = 84
+8008  exit_group(162)                   = ?
+8008  +++ exited with 162 +++
+8007  <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 162}], 0, NULL) = 8008
+8007  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=8008, si_uid=1000, si_status=162, si_utime=0, si_stime=0} ---
+8007  wait4(-1, 0x7ffd30ebb640, 0, NULL) = -1 ECHILD (No child processes)
+8007  newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+8007  write(1, "3 children finished. Total 201 l"..., 44) = 44
+8007  exit_group(0)                     = ?
+8007  +++ exited with 0 +++
